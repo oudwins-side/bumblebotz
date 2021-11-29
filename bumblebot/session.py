@@ -23,7 +23,7 @@ class Session:
 
     HOME_URL = "https://bumble.com/app"
 
-    def __init__(self, headless=False, store_session=True):
+    def __init__(self, profile_location, headless=False, store_session=True):
         self.session_data = {
             "duration": 0,
             "like": 0,
@@ -74,7 +74,7 @@ class Session:
         #     options.add_argument(f'--user-data-dir=./chrome_profile/')
         
         #options.add_argument("--user-data-dir=C:\Users\pc\AppData\Local\Google\Chrome\User Data\Default")
-        options.add_argument("--user-data-dir=C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
+        options.add_argument("--user-data-dir=" + profile_location)
 
 
         options.add_argument('--no-first-run --no-service-autorun --password-store=basic')

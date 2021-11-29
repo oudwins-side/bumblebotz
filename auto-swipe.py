@@ -2,7 +2,7 @@ from bumblebot.session import Session
 import time
 
 def main():
-    session = Session()
+    session = Session("C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
 
     session.set_custom_location(latitude=40.411189, longitude=-3.708250)
 
